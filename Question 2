@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Complex {
+    float real,imaginary;
+
+public:
+    Complex() {
+        real = imaginary = 0;
+    }
+
+    Complex (float r) {
+        real = r;
+        imaginary = 0;
+    }
+
+    Complex (float rl, float im) {
+        real = rl;
+        imaginary = im;
+    }
+
+    void display() {
+        cout << "The complex number is " << real << " + " << imaginary << "i" << endl;
+    }
+};
+
+int main() {
+    Complex C1;
+    Complex C2 (9.6);
+    Complex C3 (9.6,4.8);
+
+    cout << "For complex number 1 (both parts are 0) :" << endl;
+    C1.display();
+
+    cout << endl << "For complex number 2 (imaginary part is 0) :" << endl;
+    C2.display();
+
+    cout << endl << "For complex number 3 :" << endl;
+    C3.display();
+
+    return 0;
+}
