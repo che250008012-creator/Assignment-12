@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Box {
+    float length, breadth, height;
+
+public:
+    Box() {
+        length = 1;
+        breadth = 1;
+        height = 1;
+    }
+
+    Box(float side) {
+        length = breadth = height = side;
+    }
+
+    Box(float l, float b, float h) {
+        length = l;
+        breadth = b;
+        height = h;
+    }
+
+    void volume() {
+        cout << "Volume = " << length*breadth*height << endl;
+    }
+};
+
+int main() {
+    Box B1;
+    Box B2 (9.6);
+    Box B3 (9.6,2.4,4.8);
+
+    cout << "For Box 1 (all values are 1) :" << endl;
+    B1.volume();
+
+    cout << "For Box 2 (one value) :" << endl;
+    B2.volume();
+
+    cout << "For Box 3 (all values):" << endl;
+    B3.volume();
+
+    return 0;
+}
